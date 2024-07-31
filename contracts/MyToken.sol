@@ -25,5 +25,6 @@ contract MyToken is ERC20 {
             emit TokensTransferred(msg.sender, recipient, amount);
         }
         return success;
+        
     }
 }
