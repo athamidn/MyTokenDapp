@@ -122,7 +122,7 @@ function App() {
         const tx = await contract.transfer(recipient, ethers.utils.parseUnits(transferAmount, 18), {
           gasLimit: 100000
         });
-        await tx.wait(); 
+        await tx.wait();
         const balance = await contract.balanceOf(account);
         setBalance(balance.toString());
         const recipientBal = await contract.balanceOf(recipient);

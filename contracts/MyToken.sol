@@ -8,7 +8,7 @@ contract MyToken is ERC20 {
     event TokensTransferred(address indexed from, address indexed to, uint256 amount);
 
     constructor(uint256 initialSupply) ERC20("MyToken", "MTK") {
-        _mint(msg.sender, initialSupply * 10 ** decimals()); // استفاده از تابع decimals
+        _mint(msg.sender, initialSupply * 10 ** decimals());
     }
     function decimals() public pure override returns (uint8) {
         return 18;
