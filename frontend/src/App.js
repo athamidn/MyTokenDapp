@@ -120,9 +120,9 @@ function App() {
 
       try {
         const tx = await contract.transfer(recipient, ethers.utils.parseUnits(transferAmount, 18), {
-          gasLimit: 100000 // تنظیم دستی گس لیمیت
+          gasLimit: 100000
         });
-        await tx.wait(); // منتظر ماندن برای تایید تراکنش
+        await tx.wait(); 
         const balance = await contract.balanceOf(account);
         setBalance(balance.toString());
         const recipientBal = await contract.balanceOf(recipient);
